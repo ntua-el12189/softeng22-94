@@ -49,7 +49,7 @@ function SessionAnswers() {
 }
 
 function fetchSessionAnswers(questionnaire, session) {
-	const url = 'http://localhost:5000/intelliq_api/getsessionanswers/' + questionnaire + '/' + session
+	const url = 'http://localhost:9103/intelliq_api/getsessionanswers/' + questionnaire + '/' + session
 	return axios.get(url)
 }
 

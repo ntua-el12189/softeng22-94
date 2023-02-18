@@ -10,7 +10,7 @@ program
 	.description('Performs health check to the database / server')
 	.action(() => {
 		axios
-			.get('http://localhost:5000/intelliq_api/admin/healthcheck')
+			.get('http://localhost:9103/intelliq_api/admin/healthcheck')
 			.then((r) => console.log(r.data))
 			.catch((e) => console.log(e.message))
 	})
@@ -21,7 +21,7 @@ program
 	.description('Returns all questionnaires')
 	.action(() => {
 		axios
-			.get('http://localhost:5000/intelliq_api/questionnaire/getAll')
+			.get('http://localhost:9103/intelliq_api/questionnaire/getAll')
 			.then((r) => console.log(r.data))
 			.catch((e) => console.log(e.message))
 	})
@@ -32,7 +32,7 @@ program
 	.description('Resets everything')
 	.action(() => {
 		axios
-			.post('http://localhost:5000/intelliq_api/admin/resetAll')
+			.post('http://localhost:9103/intelliq_api/admin/resetAll')
 			.then((r) => console.log(r.data))
 			.catch((e) => console.log(e.message))
 	})
@@ -43,7 +43,7 @@ program
 	.description('Returns one questionnaire')
 	.action((Qid) => {
 		axios
-			.get(`http://localhost:5000/intelliq_api/questionnaire/${Qid}`)
+			.get(`http://localhost:9103/intelliq_api/questionnaire/${Qid}`)
 			.then((r) => console.log(r.data))
 			.catch((e) => console.log(e.message))
 	})
@@ -55,7 +55,7 @@ program
 	.action((file) => {
 		const object = require(`./${file}`)
 		axios
-			.post('http://localhost:5000/intelliq_api/admin/questionnaire_upd', object)
+			.post('http://localhost:9103/intelliq_api/admin/questionnaire_upd', object)
 			.then((r) => console.log(r.data))
 			.catch((e) => console.log(e.message))
 	})
@@ -66,7 +66,7 @@ program
 	.description('Returns all answers for one session')
 	.action((Qid, sId) => {
 		axios
-			.get(`http://localhost:5000/intelliq_api/getsessionanswers/${Qid}/${sId}`)
+			.get(`http://localhost:9103/intelliq_api/getsessionanswers/${Qid}/${sId}`)
 			.then((r) => console.log(r.data))
 			.catch((e) => console.log(e.message))
 	})
@@ -77,7 +77,7 @@ program
 	.description('Returns all answers for one question')
 	.action((Qid, qId) => {
 		axios
-			.get(`http://localhost:5000/intelliq_api/getquestionanswers/${Qid}/${qId}`)
+			.get(`http://localhost:9103/intelliq_api/getquestionanswers/${Qid}/${qId}`)
 			.then((r) => console.log(r.data))
 			.catch((e) => console.log(e.message))
 	})
@@ -88,7 +88,7 @@ program
 	.description('Returns all answers')
 	.action(() => {
 		axios
-			.get(`http://localhost:5000/intelliq_api/getAllAnswers/`)
+			.get(`http://localhost:9103/intelliq_api/getAllAnswers/`)
 			.then((r) => console.log(r.data))
 			.catch((e) => console.log(e.message))
 	})

@@ -29,7 +29,7 @@ function Home() {
 }
 
 function fetchQuestionnaires() {
-	const url = 'http://localhost:5000/intelliq_api/questionnaire/getAll'
+	const url = 'http://localhost:9103/intelliq_api/questionnaire/getAll'
 	return axios.get(url)
 }
 

@@ -40,7 +40,7 @@ function Question() {
 			const session = sessionStorage.getItem('session')
 			axios
 				.post(
-					`http://localhost:5000/intelliq_api/doanswer/${questionnaireId}/${questionId}/${session}/${selectedOption.optionId}`,
+					`http://localhost:9103/intelliq_api/doanswer/${questionnaireId}/${questionId}/${session}/${selectedOption.optionId}`,
 					{ answerText }
 				)
 				.then(() => {
@@ -109,7 +109,7 @@ function Question() {
 }
 
 function fetchQuestionnaires(questionnaire, question) {
-	const url = 'http://localhost:5000/intelliq_api/questionnaire/' + questionnaire + '/' + question
+	const url = 'http://localhost:9103/intelliq_api/questionnaire/' + questionnaire + '/' + question
 	return axios.get(url)
 }
 

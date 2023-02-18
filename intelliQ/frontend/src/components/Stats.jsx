@@ -74,7 +74,7 @@ function Stats({ questionnaireId, questionId }) {
 }
 
 function fetchQuestionAnswers(questionnaire, questionId) {
-	const url = 'http://localhost:5000/intelliq_api/getquestionanswers/' + questionnaire + '/' + questionId
+	const url = 'http://localhost:9103/intelliq_api/getquestionanswers/' + questionnaire + '/' + questionId
 	return axios.get(url)
 }
 
