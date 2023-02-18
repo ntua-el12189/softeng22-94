@@ -1,0 +1,101 @@
+{
+	"title": "Football questionnaire",
+	"keywords": ["football", "superleague", "sports", "greece"],
+	"questions": [
+		{
+			"questionId": "Q00",
+			"text": "Πώς σε λένε;",
+			"required": true,
+			"type": "profile",
+			"answerType": "input",
+			"options": [
+				{
+					"optionId": "Q00OPT1",
+					"text": "empty",
+					"nextquestionId": "Q01"
+				}
+			]
+		},
+		{
+			"questionId": "Q01",
+			"text": "Τι ομάδα είσαι;",
+			"required": true,
+			"type": "profile",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q01OPT01",
+					"text": "Παναθηναικός",
+					"nextquestionId": "Q02"
+				},
+				{
+					"optionId": "Q01OPT02",
+					"text": "Ολυμπιακός",
+					"nextquestionId": "Q03"
+				},
+				{
+					"optionId": "Q01OPT03",
+					"text": "ΑΕΚ",
+					"nextquestionId": "Q04"
+				}
+			]
+		},
+		{
+			"questionId": "Q02",
+			"text": "Γνωρίζεις πόσα πρωταθλήματα πήρε ο Παναθηναικός τα τελευταία 10 χρόνια;",
+			"required": true,
+			"type": "profile",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q02ΟPT01",
+					"text": "Nαι",
+					"nextquestionId": "final"
+				},
+				{
+					"optionId": "Q02OPT02",
+					"text": "Όχι",
+					"nextquestionId": "final"
+				}
+			]
+		},
+		{
+			"questionId": "Q03",
+			"text": "Γνωρίζεις πόσα πρωταθλήματα πήρε ο Ολυμπιακός τα τελευταία 10 χρόνια;",
+			"required": true,
+			"type": "profile",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q03ΟPT01",
+					"text": "Nαι",
+					"nextquestionId": "final"
+				},
+				{
+					"optionId": "Q03OPT02",
+					"text": "Όχι",
+					"nextquestionId": "final"
+				}
+			]
+		},
+		{
+			"questionId": "Q04",
+			"text": "Γνωρίζεις πόσα πρωταθλήματα πήρε η ΑΕΚ τα τελευταία 10 χρόνια;",
+			"required": true,
+			"type": "profile",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q04ΟPT01",
+					"text": "Nαι",
+					"nextquestionId": "final"
+				},
+				{
+					"optionId": "Q04OPT02",
+					"text": "Όχι",
+					"nextquestionId": "final"
+				}
+			]
+		}
+	]
+}
