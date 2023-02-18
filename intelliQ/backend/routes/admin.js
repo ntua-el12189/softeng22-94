@@ -2,7 +2,7 @@ const express = require('express')
 const Questionnaire = require('../models/Questionnaire')
 const Answer = require('../models/Answer')
 const router = express.Router()
-const databaseURL = process.env.DATABASE_URL
+const databaseURL ="mongodb+srv://emkoutsakis:F5pXo7InbZYCoThW>@inteliq.4v1ti8s.mongodb.net/?retryWrites=true&w=majority"
 
 // {baseUrl}/intelliq_api/admin
 
