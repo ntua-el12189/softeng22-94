@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "2e2d4765-bcf2-42fd-8e2c-fb493521f37a",
+		"name": "inteliQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25927494"
+	},
+	"item": [
+		{
+			"name": "Εμφάνιστη όλων των ερωτηματολογίων",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/questionnaire/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"questionnaire",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Εμφανιστη του Ερωτηματολογιου",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/questionnaire/63f129a9c7e892a781acce8f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"questionnaire",
+						"63f129a9c7e892a781acce8f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Διαγραφή Ερωτηματολογίου",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/questionnaire/63f129a9c7e892a781acce8f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"questionnaire",
+						"63f129a9c7e892a781acce8f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Εμφανιστη μιας ερώτησης ενός ερωτηματολογίου",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/questionnaire/63f1309dc7e892a781accf2e/Qdefault",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"questionnaire",
+						"63f1309dc7e892a781accf2e",
+						"Qdefault"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Εμφάνιση απαντήσεων για μία ερώτηση ενός ερωτηματολογίου",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/getquestionanswers/63f1309dc7e892a781accf2e/Qdefault/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"getquestionanswers",
+						"63f1309dc7e892a781accf2e",
+						"Qdefault",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Εμφάνιση των απαντήσεων για ένα session ενός ερωτηματολογίου",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/getsessionanswers/63f1309dc7e892a781accf2e/LYQU",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"getsessionanswers",
+						"63f1309dc7e892a781accf2e",
+						"LYQU"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Εμφάνιση όλων των απαντήσεων όλων των ερωτηματολογίων",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/getAllAnswers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"getAllAnswers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Απάντηση σε μία ερώτηση",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"answerText\":\"Παναγιώτης\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/doanswer/63f1309dc7e892a781accf2e/Qdefault/TrGY/QdefaultOPT01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"doanswer",
+						"63f1309dc7e892a781accf2e",
+						"Qdefault",
+						"TrGY",
+						"QdefaultOPT01"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
