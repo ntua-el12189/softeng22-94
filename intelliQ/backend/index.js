@@ -5,7 +5,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 mongoose.set('strictQuery', false)
 const mongoString =
-	'mongodb+srv://ktrip:ox3tNYv1n4KxQJi0@theseusproject.nssvshe.mongodb.net/intelliq?retryWrites=true&w=majority'
+	'mongodb+srv://emkoutsakis:<password>@inteliq.4v1ti8s.mongodb.net/?retryWrites=true&w=majority'
 
 const admin = require('./routes/admin')
 const questionnaire = require('./routes/questionnaire')
