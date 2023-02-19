@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2e2d4765-bcf2-42fd-8e2c-fb493521f37a",
+		"_postman_id": "cffa8e3e-c9b8-4cab-98b9-d7c6377727a6",
 		"name": "inteliQ",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "25927494"
@@ -163,7 +163,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"answerText\":\"Παναγιώτης\"\r\n}",
+					"raw": "{\r\n    \"answerText\":\"Μπλε\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -171,7 +171,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9103/intelliq_api/doanswer/63f1309dc7e892a781accf2e/Qdefault/TrGY/QdefaultOPT01",
+					"raw": "http://localhost:9103/intelliq_api/doanswer/63f141585d35b670a4e271b6/Q01/TrGY/QdefaultOPT01",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -180,10 +180,108 @@
 					"path": [
 						"intelliq_api",
 						"doanswer",
-						"63f1309dc7e892a781accf2e",
-						"Qdefault",
+						"63f141585d35b670a4e271b6",
+						"Q01",
 						"TrGY",
 						"QdefaultOPT01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1_Εμφάνιστη όλων των ερωτηματολογίων",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/questionnaire/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"questionnaire",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2a_Εμφανιστη μιας ερώτησης ενός ερωτηματολογίου",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/questionnaire/63f1309dc7e892a781accf2e/Qdefault",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"questionnaire",
+						"63f1309dc7e892a781accf2e",
+						"Qdefault"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2b_Απάντηση σε μία ερώτηση",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"answerText\":\"Μπλε\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/doanswer/63f141585d35b670a4e271b6/Q01/TrGY/QdefaultOPT01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"doanswer",
+						"63f141585d35b670a4e271b6",
+						"Q01",
+						"TrGY",
+						"QdefaultOPT01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3_Εμφάνιση των απαντήσεων για ένα session ενός ερωτηματολογίου",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9103/intelliq_api/getsessionanswers/63f141585d35b670a4e271b6/TrGY",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9103",
+					"path": [
+						"intelliq_api",
+						"getsessionanswers",
+						"63f141585d35b670a4e271b6",
+						"TrGY"
 					]
 				}
 			},
