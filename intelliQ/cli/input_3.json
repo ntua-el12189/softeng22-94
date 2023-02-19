@@ -1,98 +1,244 @@
 {
-	"title": "Test questionnaire",
-	"keywords": ["manos", "superleague", "sports", "greece"],
+	"title": "My questionnaire",
+	"keywords": ["CLI", "NodeJS", "ReactJS"],
 	"questions": [
 		{
-			"questionId": "Q00",
-			"text": "Πώς σε λένε;",
+			"questionId": "Qdefault",
+			"text": "Πως σας λένε;",
 			"required": true,
 			"type": "profile",
 			"answerType": "input",
 			"options": [
 				{
-					"optionId": "Q00OPT1",
+					"optionId": "QdefaultOPT01",
 					"text": "empty",
+					"nextquestionId": "Q00"
+				}
+			]
+		},
+		{
+			"questionId": "Q00",
+			"text": "Ποια είναι η ηλικία σας;",
+			"required": true,
+			"type": "profile",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q00OPT01",
+					"text": "<30",
+					"nextquestionId": "Q01"
+				},
+				{
+					"optionId": "Q00OPT02",
+					"text": "30-50",
+					"nextquestionId": "Q01"
+				},
+				{
+					"optionId": "Q00OPT03",
+					"text": "50-70",
+					"nextquestionId": "Q01"
+				},
+				{
+					"optionId": "Q00OPT4",
+					"text": ">70",
 					"nextquestionId": "Q01"
 				}
 			]
 		},
 		{
 			"questionId": "Q01",
-			"text": "Τι ομάδα είσαι;",
+			"text": "Ποιο είναι το αγαπημένο σας χρώμα;",
 			"required": true,
-			"type": "profile",
+			"type": "question",
 			"answerType": "select",
 			"options": [
 				{
-					"optionId": "Q01OPT01",
-					"text": "Παναθηναικός",
+					"optionId": "Q01OPT1",
+					"text": "Πράσινο",
 					"nextquestionId": "Q02"
 				},
 				{
-					"optionId": "Q01OPT02",
-					"text": "Ολυμπιακός",
+					"optionId": "Q01OPT2",
+					"text": "Κόκκινο",
+					"nextquestionId": "Q02"
+				},
+				{
+					"optionId": "Q01OPT3",
+					"text": "Κίτρινο",
+					"nextquestionId": "Q02"
+				},
+				{
+					"optionId": "Q01OPT4",
+					"text": "Μπλε",
+					"nextquestionId": "Q02"
+				}
+
+				
+			]
+		},
+		{
+			"questionId": "Q02",
+			"text": "Ασχολείστε με το ποδόσφαιρο;",
+			"required": true,
+			"type": "question",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q02OPT1",
+					"text": "Ναι",
 					"nextquestionId": "Q03"
 				},
 				{
-					"optionId": "Q01OPT03",
+					"optionId": "Q02OPT2",
+					"text": "Οχι",
+					"nextquestionId": "Q04"
+				}
+			]
+		},
+		{
+			"questionId": "Q03",
+			"text": "Τι ομάδα είστε;",
+			"required": true,
+			"type": "question",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q03OPT1",
+					"text": "Παναθηναϊκός",
+					"nextquestionId": "Q04"
+				},
+				{
+					"optionId": "Q03OPT2",
+					"text": "Ολυμπιακός ",
+					"nextquestionId": "Q04"
+				},
+				{
+					"optionId": "Q03OPT3",
 					"text": "ΑΕΚ",
 					"nextquestionId": "Q04"
 				}
 			]
 		},
 		{
-			"questionId": "Q02",
-			"text": "Γνωρίζεις πόσα πρωταθλήματα πήρε ο Παναθηναικός τα τελευταία 10 χρόνια;",
-			"required": true,
-			"type": "profile",
-			"answerType": "select",
-			"options": [
-				{
-					"optionId": "Q02ΟPT01",
-					"text": "Nαι",
-					"nextquestionId": "final"
-				},
-				{
-					"optionId": "Q02OPT02",
-					"text": "Όχι",
-					"nextquestionId": "final"
-				}
-			]
-		},
-		{
-			"questionId": "Q03",
-			"text": "Γνωρίζεις πόσα πρωταθλήματα πήρε ο Ολυμπιακός τα τελευταία 10 χρόνια;",
-			"required": true,
-			"type": "profile",
-			"answerType": "select",
-			"options": [
-				{
-					"optionId": "Q03ΟPT01",
-					"text": "Nαι",
-					"nextquestionId": "final"
-				},
-				{
-					"optionId": "Q03OPT02",
-					"text": "Όχι",
-					"nextquestionId": "final"
-				}
-			]
-		},
-		{
 			"questionId": "Q04",
-			"text": "Γνωρίζεις πόσα πρωταθλήματα πήρε η ΑΕΚ τα τελευταία 10 χρόνια;",
+			"text": "Έχετε ζήσει σε νησί;",
 			"required": true,
-			"type": "profile",
+			"type": "question",
 			"answerType": "select",
 			"options": [
 				{
-					"optionId": "Q04ΟPT01",
-					"text": "Nαι",
+					"optionId": "Q04OPT1",
+					"text": "Ναι",
+					"nextquestionId": "Q05"
+				},
+				{
+					"optionId": "Q04OPT2",
+					"text": "Οχι",
+					"nextquestionId": "Q06"
+				}
+			]
+		},
+		{
+			"questionId": "Q05",
+			"text": "Εφόσον έχετε ζήσει σε νησί: Ποια η σχέση σας με το θαλάσσιο σκι;",
+			"required": true,
+			"type": "question",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q05OPT1",
+					"text": "Καμία",
+					"nextquestionId": "Q06"
+				},
+				{
+					"optionId": "Q05OPT2",
+					"text": "Μικρή",
+					"nextquestionId": "Q06"
+				},
+				{
+					"optionId": "Q05OPT3",
+					"text": "Μεγάλη",
+					"nextquestionId": "Q06"
+				}
+			]
+		},
+		{
+			"questionId": "Q06",
+			"text": "Είστε χειμερινός κολυμβητής",
+			"required": true,
+			"type": "question",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q06OPT1",
+					"text": "Ναι",
+					"nextquestionId": "Q07"
+				},
+				{
+					"optionId": "Q06OPT2",
+					"text": "Οχι",
+					"nextquestionId": "Q07"
+				}
+			]
+		},
+		{
+			"questionId": "Q07",
+			"text": "Κάνετε χειμερινό σκι;",
+			"required": true,
+			"type": "question",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q07OPT1",
+					"text": "Σπάνια - καθόλου",
+					"nextquestionId": "Q08"
+				},
+				{
+					"optionId": "Q07OPT2",
+					"text": "Περιστασιακά",
+					"nextquestionId": "Q08"
+				},
+				{
+					"optionId": "Q07OPT3",
+					"text": "Τακτικά",
+					"nextquestionId": "Q08"
+				}
+			]
+		},
+		{
+			"questionId": "Q08",
+			"text": "Συμφωνείτε να αλλάζει η ώρα κάθε χρόνο;",
+			"required": true,
+			"type": "question",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q08OPT1",
+					"text": "Ναι",
+					"nextquestionId": "Q09"
+				},
+				{
+					"optionId": "Q08OPT2",
+					"text": "Οχι",
+					"nextquestionId": "final"
+				}
+			]
+		},
+		{
+			"questionId": "Q09",
+			"text": "Εφόσον συμφωνείτε να αλλάζει η ώρα: Προτιμάτε τη θερινή ή την χειμερινή ώρα;",
+			"required": true,
+			"type": "question",
+			"answerType": "select",
+			"options": [
+				{
+					"optionId": "Q09OPT1",
+					"text": "Θερινή",
 					"nextquestionId": "final"
 				},
 				{
-					"optionId": "Q04OPT02",
-					"text": "Όχι",
+					"optionId": "Q09OPT2",
+					"text": "Χειμερινή",
 					"nextquestionId": "final"
 				}
 			]
